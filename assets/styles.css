@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-image: url(./Webp.net-compress-image-16.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    justify-content: space-between;
+
+    margin: 0;
+    height: 700px;
+}
+
+.overlay,
+.overlay2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.overlay.active,
+.overlay2.active {
+    display: flex;
+}
+
+.programs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.program h2 {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.program img, h3 {
+    display: inline-block;
+    height: 20px;
+    object-fit: contain;
+}
