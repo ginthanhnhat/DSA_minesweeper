@@ -48,3 +48,37 @@ body {
     height: 20px;
     object-fit: contain;
 }
+
+.board-container {
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 30px;
+    /* border: 10px rgb(0, 0, 160) solid; */
+    background-color: transparent;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    border-radius: 30px;
+    border-style: outset;
+    padding: 3px 30px 3px 20px;
+    margin-top: 0;
+
+    width: fit-content;
+    /* background-color: blue; */
+    text-shadow: 5px 5px rgb(248, 207, 207);
+
+
+    font-family: 'Rubik Pixels';
+    font-size: 22px;
+    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    animation: blink 5s ease-in-out infinite alternate;
+
+}
