@@ -102,3 +102,59 @@ body {
     border: 5px solid black;
     display: none;
 }
+
+.choose {
+    width: 60%;
+    margin: 200px;
+    border: 1px solid black;
+    height: 300px;
+    position: fixed;
+    background-color: lightgray;
+    display: none;
+}
+
+.close-btn,
+.close-btn2 {
+    position: absolute;
+    right: 0;
+    padding: 10px 15px;
+    top: 0;
+    color: white;
+    background-color: red;
+}
+
+.choose.active {
+    display: block;
+}
+
+.howToPlay {
+    display: none;
+}
+
+.howToPlay.active {
+    position: fixed;
+    display: flex;
+    width: 60%;
+    margin: 200px;
+    border: 1px solid black;
+    background-color: lightgray;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.howToPlay h1 {
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.howToPlay__list {
+
+    list-style-type: none;
+}
+
+.howToPlay__line {
+    padding: 6px 12px;
+
+}
