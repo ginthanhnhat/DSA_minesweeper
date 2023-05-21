@@ -110,6 +110,19 @@ body {
     
 }
 
+#mines-count,
+#timer {
+    margin-bottom: 5%;
+    background-color: rgb(240, 140, 9);
+    height: 40px;
+    width: 22%;
+    color: ghostwhite;
+    text-align: center;
+    font-size: 30px;
+    border: 5px solid rgb(228 219 206 / 38%);
+    border-radius: 39px;
+}
+
 #undo {
     width: 100px;
     height: 50px;
