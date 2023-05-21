@@ -136,6 +136,54 @@
         </div>
     </div>
 
+    <script>
+        var closeX = document.querySelector(".close-btn")
+        var closeX2 = document.querySelector(".close-btn2")
 
+        var overlay = document.querySelector(".overlay");
+        var overlay2 = document.querySelector(".overlay2");
+
+        var choose = document.querySelector(".program.choose-flag")
+        var howToPlay = document.querySelector(".program.how-to-play")
+        var active = document.querySelectorAll(".active")
+
+
+        var boardDiv = document.querySelectorAll("#board div")
+        var time = 0;
+        var mineCount = document.getElementById("mines-count")
+        document.querySelector("#timer").innerHTML = time
+        setInterval(setTimer, 1000)
+        function setTimer() {
+            if (mineCount != "won") {
+                time++;
+            }
+            document.querySelector("#timer").innerHTML = time;
+        }
+
+
+        choose.onclick = function () {
+
+            document.querySelector(".choose").classList.add("active")
+            overlay.classList.add("active")
+        }
+
+        howToPlay.onclick = function () {
+            overlay2.classList.add("active")
+            document.querySelector(".howToPlay").classList.add("active")
+
+        }
+
+        closeX.onclick = function () {
+            overlay.classList.remove("active");
+            document.querySelector.bind(document)(".choose.active").classList.remove("active");
+        }
+
+        closeX2.onclick = function () {
+            overlay2.classList.remove("active");
+            document.querySelector.bind(document)(".howToPlay.active").classList.remove("active");
+        }
+
+
+    </script>
 
 </body>
