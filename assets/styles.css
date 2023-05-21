@@ -83,6 +83,46 @@ body {
 
 }
 
+.title-img {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+
+    animation: floating 1s ease-in-out infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        background: -webkit-linear-gradient(#f76713, #bb1307);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    } to {
+        background: -webkit-linear-gradient(#bb1307, #f76713);
+    }
+}
+
+@keyframes floating {
+    from {
+        margin-top: 10px;
+    } to {
+        margin-top: -5px;
+    }
+    
+}
+
+#mines-count,
+#timer {
+    margin-bottom: 5%;
+    background-color: rgb(240, 140, 9);
+    height: 40px;
+    width: 22%;
+    color: ghostwhite;
+    text-align: center;
+    font-size: 30px;
+    border: 5px solid rgb(228 219 206 / 38%);
+    border-radius: 39px;
+}
+
 #undo {
     width: 100px;
     height: 50px;
