@@ -83,6 +83,25 @@ body {
 
 }
 
+@keyframes blink {
+    from {
+        background: -webkit-linear-gradient(#f76713, #bb1307);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    } to {
+        background: -webkit-linear-gradient(#bb1307, #f76713);
+    }
+}
+
+@keyframes floating {
+    from {
+        margin-top: 10px;
+    } to {
+        margin-top: -5px;
+    }
+    
+}
+
 #undo {
     width: 100px;
     height: 50px;
