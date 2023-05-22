@@ -290,33 +290,7 @@ body {
     width: 30px;
 }
 
-.taskbar {
-    left: 0;
-    height: 50px;
-    background-color: blue;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: flex-start;
 
-}
-
-.windows {
-    background-color: green;
-    height: 100%;
-    width: 15%;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.windows img {
-    height: 100%;
-    background-color: green;
-    left: 0;
-
-}
 
 .howToPlay {
     display: none;
