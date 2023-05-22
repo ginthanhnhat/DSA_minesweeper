@@ -1,3 +1,6 @@
+var board = [];
+var rows = 8;
+var columns = 8;
 var minesCount = 10;
 window.onload = function () {
     startGame();
@@ -10,6 +13,18 @@ function startGame() {
     document.getElementById("flag2").addEventListener("click", setflag2);
     document.getElementById("flag3").addEventListener("click", setflag3);
     document.getElementById("mines-count").innerText = minesCount;
-    document.getElementById("flag-button").innerText = flag;
-    
-}    
+    document.getElementById("flag-button").innerText = flag;   
+
+for (let r = 0; r < rows; r++) {
+    let row = [];
+    for (let c = 0; c < columns; c++) {
+      let tile = document.createElement("div");
+      tile.id = r.toString() + "-" + c.toString();
+      tile.addEventListener("click", clickTile);    
+      tile.addEventListener("contextmenu", putFlag);   
+      document.getElementById("board").append(tile);
+      row.push(tile);
+    }
+    board.push(row);
+}
+}
