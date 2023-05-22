@@ -83,12 +83,26 @@ body {
 
 }
 
-.title-img {
-    background-color: transparent;
-    width: 60px;
-    height: 60px;
+.mine-left {
+    border: 10px solid transparent;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 
-    animation: floating 1s ease-in-out infinite alternate;
+    margin-right: 40px;
+}
+
+#mines-count,
+#timer {
+    margin-bottom: 5%;
+    background-color: rgb(240, 140, 9);
+    height: 40px;
+    width: 22%;
+    color: ghostwhite;
+    text-align: center;
+    font-size: 30px;
+    border: 5px solid rgb(228 219 206 / 38%);
+    border-radius: 39px;
 }
 
 @keyframes blink {
@@ -110,27 +124,73 @@ body {
     
 }
 
-#mines-count,
-#timer {
-    margin-bottom: 5%;
-    background-color: rgb(240, 140, 9);
-    height: 40px;
-    width: 22%;
-    color: ghostwhite;
-    text-align: center;
-    font-size: 30px;
-    border: 5px solid rgb(228 219 206 / 38%);
-    border-radius: 39px;
+.title-img {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+
+    animation: floating 1s ease-in-out infinite alternate;
 }
 
-#undo {
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-    background-color: rgb(57, 120, 230);
-    border-radius: 30px;
 
-    transition: all ease-in-out;
+
+#board {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(221, 130, 32);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 3px 2px 8px 10px rgb(28, 27, 27);
+    margin-bottom: 10px;
+}
+
+#board div {
+    width: 48px;
+    height: 48px;
+    border: 1px solid white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px -2px 9px 1px rgb(165, 163, 163);
+}
+
+.tile-clicked {
+    background: rgb(173, 169, 167);
+}
+
+.x1 {
+    color: blue;
+}
+
+.x2 {
+    color: green;
+}
+
+.x3 {
+    color: red;
+}
+
+.x4 {
+    color: navy;
+}
+
+.x5 {
+    color: brown;
+}
+
+.x6 {
+    color: teal;
+}
+
+.x7 {
+    color: black;
+}
+
+.x8 {
+    color: gray;
 }
 
 #flag-button {
@@ -142,6 +202,17 @@ body {
     border: 5px solid black;
     display: none;
 }
+
+.restart {
+    width: 25%;
+    height: 100%;
+}
+
+.restart-face {
+    height: 58px;
+}
+
+
 
 .choose {
     width: 60%;
@@ -165,6 +236,86 @@ body {
 
 .choose.active {
     display: block;
+}
+
+#flag1,
+#flag2,
+#flag3,
+#bomb1,
+#bomb2,
+#bomb3 {
+    margin-left: 20px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: lightgray;
+    border: none;
+}
+
+#undo {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: rgb(57, 120, 230);
+    border-radius: 30px;
+
+    transition: all ease-in-out;
+}
+
+#undo:hover {
+    background-color: #bb1307;
+}
+
+#flag1:hover,
+#flag2:hover,
+#flag3:hover,
+#bomb1:hover,
+#bomb2:hover,
+#bomb3:hover {
+    background-color: black;
+}
+
+#flag1,
+#flag2,
+#flag3,
+#bomb1,
+#bomb2,
+#bomb3 {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.undo-img {
+    height: 30px;
+    width: 30px;
+}
+
+.taskbar {
+    left: 0;
+    height: 50px;
+    background-color: blue;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.windows {
+    background-color: green;
+    height: 100%;
+    width: 15%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.windows img {
+    height: 100%;
+    background-color: green;
+    left: 0;
+
 }
 
 .howToPlay {
@@ -197,12 +348,4 @@ body {
 .howToPlay__line {
     padding: 6px 12px;
 
-}
-
-.restart {
-    width: 25%;
-    height: 100%;
-}
-.restart-face {
-    height: 58px;
 }
