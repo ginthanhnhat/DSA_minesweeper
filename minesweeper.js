@@ -8,4 +8,5 @@ function startGame() {
     document.getElementById("flag1").addEventListener("click", setflag1);
     document.getElementById("flag2").addEventListener("click", setflag2);
     document.getElementById("flag3").addEventListener("click", setflag3);
+    document.getElementById("mines-count").innerText = minesCount;
 }    
