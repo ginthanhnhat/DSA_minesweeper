@@ -22,6 +22,7 @@ function startGame() {
     document.getElementById("flag3").addEventListener("click", setflag3);
     document.getElementById("mines-count").innerText = minesCount;
     document.getElementById("flag-button").innerText = flag;
+    document.getElementById("flag-button").addEventListener("click", setFlag);
     setMines();   
 
     for (let r = 0; r < rows; r++) {
@@ -51,4 +52,39 @@ function setMines() {
       }
     }
 }
+function clickTile() {
+  if (gameOver || this.classList.contains("tile-clicked")) {
+    return;
+  }
+
+
+  let tile = this;
+  if (!flagEnabled && tile.innerText == flag) {
+    return;
+  }
+  if (flagEnabled) {
+    if (tile.innerText == "") {
+      tile.innerText = flag;
+ 
+    } else if (tile.innerText == flag) {
+      tile.innerText = "";
+ 
+    }
+  } else if (minesLocation.includes(tile.id)) {
+    alert("GAME OVER");
+    gameOver = true;
+    revealMines();
+
+
+    return;
+  } else {
+    let coords = tile.id.split("-");
+    let r = parseInt(coords[0]);
+    let c = parseInt(coords[1]);
+    checkMine(r, c);
+
+
+  }
+}
+
   
