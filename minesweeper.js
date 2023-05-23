@@ -87,4 +87,13 @@ function clickTile() {
   }
 }
 
-  
+function revealMines() {
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < columns; c++) {
+      let tile = board[c][r];
+      if (minesLocation.includes(tile.id)) {
+        tile.innerText = bomb;
+      }
+    }
+  }
+}
