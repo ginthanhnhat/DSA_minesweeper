@@ -1,8 +1,15 @@
 var board = [];
 var rows = 8;
 var columns = 8;
+
 var minesCount = 10;
 var minesLocation = [];
+
+var tilesClicked = 0;
+var flagEnabled = false;
+
+var flag = "🚩";
+
 window.onload = function () {
     startGame();
 }
