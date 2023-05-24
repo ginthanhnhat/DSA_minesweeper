@@ -26,6 +26,9 @@ Group members:
 | 3     | Nguyễn Huỳnh Anh Tú    | ITITIU20337 | ITITIU20337@student.hcmiu.edu.vn | ITITIU20337               |
 | 4     | Nguyễn Đăng Vũ Duy    | ITITWE19021 | ITITWE19021@student.hcmiu.edu.vn | DuyTek                    |   
 | 5     | Trần Thanh Nhật       | ITITIU20266 | ITITIU20266@student.hcmiu.edu.vn | Ginnit08                  | 
+
+
+
 ❓ Why we choose this topic
 The reason why we choose this topic because it is the challenging game, require careful planning and strategic thinking. 
 
@@ -38,20 +41,25 @@ The reason why we choose this topic because it is the challenging game, require 
 | 3     |                js       |  Nguyễn Huỳnh Anh Tú    |      25          |
 | 4     |                 html        |  Nguyễn Đăng Vũ Duy      |          25      |
 | 5     |                html                  |   Phạm Lê Huy    |          25      |
+
+
 Let others know how they can contribute to your project. Include guidelines for reporting issues or submitting pull requests.
 ## GAME 🎮
 ### Requirement for software
 Language: html, css, js
 Platform: visual studio code
 ### How to play 
+
+
+
 ### Game logic 
  
 ### Features
-  #### Main features
+ #### Main features
 - Tile
 - Bomb
 - Flag
-  #### Extra features
+ #### Extra features
 - Choose flag
 - Choose bomb
 - Time counting
@@ -59,12 +67,14 @@ Platform: visual studio code
 - Undo
 - Replay
 - Background, effect  
-  #### Future features 
+ #### Future features 
 - Redo
 - Include more game in one
 - More effect
 - Save game
 - Ranking
+ #### Challenging
+ 
 ## Installation
 
 1. Download and unzip the file
