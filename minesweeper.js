@@ -14,56 +14,53 @@ var gameStateIndex = -1;
 var bomb = "💣";
 var flag = "🚩";
 
-
 window.onload = function () {
-    startGame();
-}
+  startGame();
+};
 function startGame() {
-    document.getElementById("bomb1").addEventListener("click", setBomb1);
-    document.getElementById("bomb2").addEventListener("click", setBomb2);
-    document.getElementById("bomb3").addEventListener("click", setBomb3);
-    document.getElementById("flag1").addEventListener("click", setflag1);
-    document.getElementById("flag2").addEventListener("click", setflag2);
-    document.getElementById("flag3").addEventListener("click", setflag3);
-    document.getElementById("mines-count").innerText = minesCount;
-    document.getElementById("flag-button").innerText = flag;
-    document.getElementById("flag-button").addEventListener("click", setFlag);
-    document.getElementById("undo").addEventListener("click", undo);
-    setMines();   
+  document.getElementById("bomb1").addEventListener("click", setBomb1);
+  document.getElementById("bomb2").addEventListener("click", setBomb2);
+  document.getElementById("bomb3").addEventListener("click", setBomb3);
+  document.getElementById("flag1").addEventListener("click", setflag1);
+  document.getElementById("flag2").addEventListener("click", setflag2);
+  document.getElementById("flag3").addEventListener("click", setflag3);
+  document.getElementById("mines-count").innerText = minesCount;
+  document.getElementById("flag-button").innerText = flag;
+  document.getElementById("flag-button").addEventListener("click", setFlag);
+  document.getElementById("undo").addEventListener("click", undo);
+  setMines();
 
-    for (let r = 0; r < rows; r++) {
-        let row = [];
-        for (let c = 0; c < columns; c++) {
-        let tile = document.createElement("div");
-        tile.id = r.toString() + "-" + c.toString();
-        tile.addEventListener("click", clickTile);    
-        tile.addEventListener("contextmenu", putFlag);   
-        document.getElementById("board").append(tile);
-        row.push(tile);
-        }
-        board.push(row);
+  for (let r = 0; r < rows; r++) {
+    let row = [];
+    for (let c = 0; c < columns; c++) {
+      let tile = document.createElement("div");
+      tile.id = r.toString() + "-" + c.toString();
+      tile.addEventListener("click", clickTile);
+      tile.addEventListener("contextmenu", putFlag);
+      document.getElementById("board").append(tile);
+      row.push(tile);
     }
-    saveState()
+    board.push(row);
+  }
+  saveState();
 }
 function setMines() {
-    let minesLeft = minesCount;
-    while (minesLeft > 0) {
-      let r = Math.floor(Math.random() * rows);
-      let c = Math.floor(Math.random() * columns);
-      let id = r.toString() + "-" + c.toString();
-  
-  
-      if (!minesLocation.includes(id)) {
-        minesLocation.push(id);
-        minesLeft -= 1;
-      }
+  let minesLeft = minesCount;
+  while (minesLeft > 0) {
+    let r = Math.floor(Math.random() * rows);
+    let c = Math.floor(Math.random() * columns);
+    let id = r.toString() + "-" + c.toString();
+
+    if (!minesLocation.includes(id)) {
+      minesLocation.push(id);
+      minesLeft -= 1;
     }
+  }
 }
 function clickTile() {
   if (gameOver || this.classList.contains("tile-clicked")) {
     return;
   }
-
 
   let tile = this;
   if (!flagEnabled && tile.innerText == flag) {
@@ -72,16 +69,16 @@ function clickTile() {
   if (flagEnabled) {
     if (tile.innerText == "") {
       tile.innerText = flag;
-      saveState()
+      saveState();
     } else if (tile.innerText == flag) {
       tile.innerText = "";
-      saveState()
+      saveState();
     }
   } else if (minesLocation.includes(tile.id)) {
     alert("GAME OVER");
     gameOver = true;
     revealMines();
-    saveState()
+    saveState();
 
     return;
   } else {
@@ -89,8 +86,7 @@ function clickTile() {
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
     checkMine(r, c);
-    saveState()
-
+    saveState();
   }
 }
 
@@ -105,7 +101,7 @@ function revealMines() {
   }
 }
 
-function checkTile(r, c){
+function checkTile(r, c) {
   if (r < 0 || r >= rows || c < 0 || c >= columns) {
     return 0;
   }
@@ -125,27 +121,21 @@ function checkMine(r, c) {
     return;
   }
 
-
   board[r][c].classList.add("tile-clicked");
   tilesClicked += 1;
 
-
   let minesFound = 0;
-
 
   minesFound += checkTile(r - 1, c - 1);
   minesFound += checkTile(r - 1, c);
   minesFound += checkTile(r - 1, c + 1);
 
-
   minesFound += checkTile(r, c - 1);
   minesFound += checkTile(r, c + 1);
-
 
   minesFound += checkTile(r + 1, c - 1);
   minesFound += checkTile(r + 1, c);
   minesFound += checkTile(r + 1, c + 1);
-
 
   if (minesFound > 0) {
     board[r][c].innerText = minesFound;
@@ -155,16 +145,13 @@ function checkMine(r, c) {
     checkMine(r - 1, c);
     checkMine(r - 1, c + 1);
 
-
     checkMine(r, c - 1);
     checkMine(r, c + 1);
-
 
     checkMine(r + 1, c - 1);
     checkMine(r + 1, c);
     checkMine(r + 1, c + 1);
   }
-
 
   if (tilesClicked == rows * columns - minesCount) {
     document.getElementById("mines-count").innerText = "won";
@@ -182,10 +169,10 @@ function putFlag(e) {
   let tile = this;
   if (tile.innerText == "") {
     tile.innerText = flag;
-    saveState()
+    saveState();
   } else if (tile.innerText == flag) {
     tile.innerText = "";
-    saveState()
+    saveState();
   }
 }
 
