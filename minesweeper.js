@@ -28,6 +28,7 @@ function startGame() {
     document.getElementById("mines-count").innerText = minesCount;
     document.getElementById("flag-button").innerText = flag;
     document.getElementById("flag-button").addEventListener("click", setFlag);
+    document.getElementById("undo").addEventListener("click", undo);
     setMines();   
 
     for (let r = 0; r < rows; r++) {
@@ -42,6 +43,7 @@ function startGame() {
         }
         board.push(row);
     }
+    saveState()
 }
 function setMines() {
     let minesLeft = minesCount;
@@ -70,16 +72,16 @@ function clickTile() {
   if (flagEnabled) {
     if (tile.innerText == "") {
       tile.innerText = flag;
- 
+      saveState()
     } else if (tile.innerText == flag) {
       tile.innerText = "";
- 
+      saveState()
     }
   } else if (minesLocation.includes(tile.id)) {
     alert("GAME OVER");
     gameOver = true;
     revealMines();
-
+    saveState()
 
     return;
   } else {
@@ -87,7 +89,7 @@ function clickTile() {
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
     checkMine(r, c);
-
+    saveState()
 
   }
 }
@@ -180,8 +182,10 @@ function putFlag(e) {
   let tile = this;
   if (tile.innerText == "") {
     tile.innerText = flag;
+    saveState()
   } else if (tile.innerText == flag) {
     tile.innerText = "";
+    saveState()
   }
 }
 
@@ -225,4 +229,42 @@ function setflag3() {
   document.getElementById("flag-button").innerText = flag;
   alert("flag changed");
   return;
+}
+
+function saveState() {
+  var state = {
+    board: board.map((row) =>
+      row.map((tile) => ({
+        id: tile.id,
+        text: tile.innerText,
+        classes: [...tile.classList],
+      }))
+    ),
+    tilesClicked: tilesClicked,
+    gameOver: gameOver,
+  };
+  gameState.push(state);
+  gameStateIndex++;
+}
+
+function clearFutureStates() {
+  gameState.splice(gameStateIndex + 1);
+}
+
+function undo() {
+  if (gameStateIndex < 0) {
+    return;
+  }
+  var state = gameState[gameStateIndex];
+  board.forEach((row, rowIndex) => {
+    row.forEach((tile, colIndex) => {
+      var savedTile = state.board[rowIndex][colIndex];
+      tile.innerText = savedTile.text;
+      tile.className = savedTile.classes.join(" ");
+    });
+  });
+  tilesClicked = state.tilesClicked;
+  gameOver = state.gameOver;
+  clearFutureStates();
+  gameStateIndex--;
 }
