@@ -195,3 +195,34 @@ function setFlag() {
   }
 }
 
+function setBomb1() {
+  alert("bomb changed");
+  return (bomb = "💣");
+}
+function setBomb2() {
+  alert("bomb changed");
+  return (bomb = "💥");
+}
+function setBomb3() {
+  alert("bomb changed");
+  return (bomb = "🧨");
+}
+
+function setflag1() {
+  flag = "🚩";
+  document.getElementById("flag-button").innerText = flag;
+  alert("flag changed");
+  return;
+}
+function setflag2() {
+  flag = "🏳️";
+  document.getElementById("flag-button").innerText = flag;
+  alert("flag changed");
+  return;
+}
+function setflag3() {
+  flag = "🏴";
+  document.getElementById("flag-button").innerText = flag;
+  alert("flag changed");
+  return;
+}
