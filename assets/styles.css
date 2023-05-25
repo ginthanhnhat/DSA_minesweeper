@@ -43,7 +43,8 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.program img, h3 {
+.program img,
+h3 {
     display: inline-block;
     height: 20px;
     object-fit: contain;
@@ -73,7 +74,7 @@ body {
 
     font-family: 'Rubik Pixels';
     font-size: 22px;
-    
+
 
     display: flex;
     flex-direction: row;
@@ -110,7 +111,9 @@ body {
         background: -webkit-linear-gradient(#f76713, #bb1307);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    } to {
+    }
+
+    to {
         background: -webkit-linear-gradient(#bb1307, #f76713);
     }
 }
@@ -118,10 +121,12 @@ body {
 @keyframes floating {
     from {
         margin-top: 10px;
-    } to {
+    }
+
+    to {
         margin-top: -5px;
     }
-    
+
 }
 
 .title-img {
@@ -285,7 +290,8 @@ body {
     border-radius: 10px;
 }
 
-div.program.choose-flag,div.program.how-to-play {
+div.program.choose-flag,
+div.program.how-to-play {
     background-color: rgb(239, 236, 231);
     box-shadow: inset;
     width: 190px;
@@ -308,7 +314,8 @@ div.program.choose-flag,div.program.how-to-play {
     color: #fff;
 }
 
-div.program.choose-flag:hover, div.program.how-to-play:hover {
+div.program.choose-flag:hover,
+div.program.how-to-play:hover {
     background-color: rgb(37, 37, 37);
     cursor: pointer;
 }

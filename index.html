@@ -1,133 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>minesweeper</title>
-        <link rel="stylesheet" href="./assets/styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet">
-        <script src="minesweeper.js"></script>
-    </head>
 
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minesweeper</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap" rel="stylesheet">
+    <script src="minesweeper.js"></script>
+</head>
 
-    <body>
-        <div class="programs">
-            <div class="icon">
-                <img class="icon_hcmiu" src="/assets/logo-vector-IU-01.png" alt="">
-            </div>
 
-            <div class="program choose-flag">
-                <h3 class="btn-title">🚩Choose flag </h3>
-            </div>
 
-            <div class="program how-to-play">
-                <h3 class="btn-title">❓How to play </h3>
-            </div>
-
-            <div class="program choose-flag">
-                <a href="https://github.com/tainguynnn/minesweeper">
-                    <img src=" ./assets/git.png" alt="">
-                </a>
-                <h3 class="btn-title">Github</h3>
-            </div>
+<body>
+    <div class="programs">
+        <div class="icon">
+            <img class="icon_hcmiu" src="/assets/logo-vector-IU-01.png" alt="">
         </div>
 
-        <div class="board-container">
-            <div class="title">
-                <img class="title-img" src="./assets/Minesweeper_1992.webp" alt="">
-                <h1 class="title__title">MINESWEEPER</h1>
-            </div>
-            <div class="mine-left">
-                <div id="mines-count">0</div>
-                <a href="" class="restart">
-                    <img class="restart-face" src="./assets/smile.png" alt="">
-                </a>
-                <div id="timer"></div>
-            </div>
-            <div id="board">
-            </div>
-            <button id="flag-button">🚩</button>
-            <button id="undo">
-                <img class="undo-img" src="./assets/undo.png" alt="">
-            </button>
+        <div class="program choose-flag">
+            <h3 class="btn-title">🚩Choose flag </h3>
         </div>
 
-        <div class="overlay">
-            <div class="choose">
-                <h1>choose flag <span class="close-btn">X</span></h1>
-                <button id="flag1">🚩</button>
-                <button id="flag2">🏳️</button>
-                <button id="flag3">🏴</button>
-                <h1>choose bomb</h1>
-                <button id="bomb1">💣</button>
-                <button id="bomb2">💥</button>
-                <button id="bomb3">🧨</button>
-            </div>
+        <div class="program how-to-play">
+            <h3 class="btn-title">❓How to play </h3>
         </div>
 
-        <div class="overlay2">
-            <div class="howToPlay">
-                <h1>How to Play</h1>
-                <p class="howToPlay__line">click on a tile to play, If you click a tile with a mine, you lose</p>
-                <p class="howToPlay__line">the Number in a tile show the number of mines around that tile</p>
-                <p class="howToPlay__line">In this game, there is only 10 mines. Your goal is to click all the tile
-                    without
-                    the mines inside</p>
-                <p class="howToPlay__line">Mark the tile that you think there posibibly be a bomb to avoid accidentally
-                    click with the flag 🚩using right click</p>
-                <p class="howToPlay__line">Click the smiley face to restart the game or the ⏪ to undo</p>
-                <span class="close-btn2">X</span>
-            </div>
+        <div class="program choose-flag">
+            <a href="https://github.com/tainguynnn/minesweeper">
+                <img src=" ./assets/git.png" alt="">
+            </a>
+            <h3 class="btn-title">Github</h3>
         </div>
+    </div>
 
-        <script>
-            var closeX = document.querySelector(".close-btn")
-            var closeX2 = document.querySelector(".close-btn2")
+    <div class="board-container">
+        <div class="title">
+            <img class="title-img" src="./assets/Minesweeper_1992.webp" alt="">
+            <h1 class="title__title">MINESWEEPER</h1>
+        </div>
+        <div class="mine-left">
+            <div id="mines-count">0</div>
+            <a href="" class="restart">
+                <img class="restart-face" src="./assets/smile.png" alt="">
+            </a>
+            <div id="timer"></div>
+        </div>
+        <div id="board">
+        </div>
+        <button id="flag-button">🚩</button>
+        <button id="undo">
+            <img class="undo-img" src="./assets/undo.png" alt="">
+        </button>
+    </div>
 
-            var overlay = document.querySelector(".overlay");
-            var overlay2 = document.querySelector(".overlay2");
+    <div class="overlay">
+        <div class="choose">
+            <h1>choose flag <span class="close-btn">X</span></h1>
+            <button id="flag1">🚩</button>
+            <button id="flag2">🏳️</button>
+            <button id="flag3">🏴</button>
+            <h1>choose bomb</h1>
+            <button id="bomb1">💣</button>
+            <button id="bomb2">💥</button>
+            <button id="bomb3">🧨</button>
+        </div>
+    </div>
 
-            var choose = document.querySelector(".program.choose-flag")
-            var howToPlay = document.querySelector(".program.how-to-play")
-            var active = document.querySelectorAll(".active")
+    <div class="overlay2">
+        <div class="howToPlay">
+            <h1>How to Play</h1>
+            <p class="howToPlay__line">click on a tile to play, If you click a tile with a mine, you lose</p>
+            <p class="howToPlay__line">the Number in a tile show the number of mines around that tile</p>
+            <p class="howToPlay__line">In this game, there is only 10 mines. Your goal is to click all the tile
+                without
+                the mines inside</p>
+            <p class="howToPlay__line">Mark the tile that you think there posibibly be a bomb to avoid accidentally
+                click with the flag 🚩using right click</p>
+            <p class="howToPlay__line">Click the smiley face to restart the game or the ⏪ to undo</p>
+            <span class="close-btn2">X</span>
+        </div>
+    </div>
 
-            var boardDiv = document.querySelectorAll("#board div")
-            var time = 0;
-            var mineCount = document.getElementById("mines-count")
-            document.querySelector("#timer").innerHTML = time
-            setInterval(setTimer, 1000)
-            function setTimer() {
-                if (mineCount != "won") {
-                    time++;
-                }
-                document.querySelector("#timer").innerHTML = time;
+    <script>
+        var closeX = document.querySelector(".close-btn")
+        var closeX2 = document.querySelector(".close-btn2")
+
+        var overlay = document.querySelector(".overlay");
+        var overlay2 = document.querySelector(".overlay2");
+
+        var choose = document.querySelector(".program.choose-flag")
+        var howToPlay = document.querySelector(".program.how-to-play")
+        var active = document.querySelectorAll(".active")
+
+        var boardDiv = document.querySelectorAll("#board div")
+        var time = 0;
+        var mineCount = document.getElementById("mines-count")
+        document.querySelector("#timer").innerHTML = time
+        setInterval(setTimer, 1000)
+        function setTimer() {
+            if (mineCount != "won") {
+                time++;
             }
+            document.querySelector("#timer").innerHTML = time;
+        }
 
-            choose.onclick = function () {
+        choose.onclick = function () {
 
-                document.querySelector(".choose").classList.add("active")
-                overlay.classList.add("active")
-            }
+            document.querySelector(".choose").classList.add("active")
+            overlay.classList.add("active")
+        }
 
-            howToPlay.onclick = function () {
-                overlay2.classList.add("active")
-                document.querySelector(".howToPlay").classList.add("active")
+        howToPlay.onclick = function () {
+            overlay2.classList.add("active")
+            document.querySelector(".howToPlay").classList.add("active")
 
-            }
+        }
 
-            closeX.onclick = function () {
-                overlay.classList.remove("active");
-                document.querySelector.bind(document)(".choose.active").classList.remove("active");
-            }
+        closeX.onclick = function () {
+            overlay.classList.remove("active");
+            document.querySelector.bind(document)(".choose.active").classList.remove("active");
+        }
 
-            closeX2.onclick = function () {
-                overlay2.classList.remove("active");
-                document.querySelector.bind(document)(".howToPlay.active").classList.remove("active");
-            }
-        </script>
-    </body>
+        closeX2.onclick = function () {
+            overlay2.classList.remove("active");
+            document.querySelector.bind(document)(".howToPlay.active").classList.remove("active");
+        }
+    </script>
+</body>
+
 </html>

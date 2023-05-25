@@ -8,7 +8,12 @@ var minesLocation = [];
 var tilesClicked = 0;
 var flagEnabled = false;
 
+var gameOver = false;
+var gameState = [];
+var gameStateIndex = -1;
+var bomb = "💣";
 var flag = "🚩";
+
 
 window.onload = function () {
     startGame();
@@ -166,3 +171,27 @@ function checkMine(r, c) {
     location.reload();
   }
 }
+
+function putFlag(e) {
+  e.preventDefault();
+  if (gameOver || this.classList.contains("tile-clicked")) {
+    return;
+  }
+  let tile = this;
+  if (tile.innerText == "") {
+    tile.innerText = flag;
+  } else if (tile.innerText == flag) {
+    tile.innerText = "";
+  }
+}
+
+function setFlag() {
+  if (flagEnabled) {
+    flagEnabled = false;
+    document.getElementById("flag-button").style.backgroundColor = "lightgray";
+  } else {
+    flagEnabled = true;
+    document.getElementById("flag-button").style.backgroundColor = "darkgray";
+  }
+}
+
