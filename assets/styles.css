@@ -95,10 +95,10 @@ h3 {
 
 #mines-count,
 #timer {
-    margin-bottom: 5%;
+    margin-bottom: 15px;
     background-color: rgb(240, 140, 9);
     height: 40px;
-    width: 22%;
+    width: 100px;
     color: ghostwhite;
     text-align: center;
     font-size: 30px;
