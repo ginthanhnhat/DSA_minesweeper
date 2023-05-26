@@ -202,9 +202,8 @@ h3 {
     width: 100px;
     height: 50px;
     font-size: 20px;
-    background-color: lightgray;
-    border: none;
-    border: 5px solid black;
+    background-color: rgb(57, 120, 230);
+    border-radius: 30px;
     display: none;
 }
 
@@ -366,4 +365,16 @@ div.program.how-to-play:hover {
 .howToPlay__line {
     padding: 6px 12px;
 
+}
+
+@media (max-width:1024px) {
+    #flag-button {
+        
+        display: block;
+    }
+    #board-footer{
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+    }
 }
