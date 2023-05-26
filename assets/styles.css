@@ -43,7 +43,8 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.program img, h3 {
+.program img,
+h3 {
     display: inline-block;
     height: 20px;
     object-fit: contain;
@@ -73,7 +74,7 @@ body {
 
     font-family: 'Rubik Pixels';
     font-size: 22px;
-    
+
 
     display: flex;
     flex-direction: row;
@@ -94,10 +95,10 @@ body {
 
 #mines-count,
 #timer {
-    margin-bottom: 5%;
+    margin-bottom: 15px;
     background-color: rgb(240, 140, 9);
     height: 40px;
-    width: 22%;
+    width: 100px;
     color: ghostwhite;
     text-align: center;
     font-size: 30px;
@@ -110,7 +111,9 @@ body {
         background: -webkit-linear-gradient(#f76713, #bb1307);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    } to {
+    }
+
+    to {
         background: -webkit-linear-gradient(#bb1307, #f76713);
     }
 }
@@ -118,10 +121,12 @@ body {
 @keyframes floating {
     from {
         margin-top: 10px;
-    } to {
+    }
+
+    to {
         margin-top: -5px;
     }
-    
+
 }
 
 .title-img {
@@ -285,38 +290,51 @@ body {
     border-radius: 10px;
 }
 
+div.program.choose-flag,
+div.program.how-to-play {
+    background-color: rgb(239, 236, 231);
+    box-shadow: inset;
+    width: 190px;
+    height: fit-content;
+    border-radius: 50px;
+    border-style: groove;
+    margin-bottom: 10px;
+    transition: background-color ease-in-out 0.2s;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.btn-title {
+    color: black;
+
+}
+
+.btn-title:hover {
+    color: #fff;
+}
+
+div.program.choose-flag:hover,
+div.program.how-to-play:hover {
+    background-color: rgb(37, 37, 37);
+    cursor: pointer;
+}
+
+.icon_hcmiu {
+    position: absolute;
+    left: 98px;
+    margin-top: 70px;
+    width: 100px;
+    height: auto;
+    top: 0;
+}
+
 .undo-img {
     height: 30px;
     width: 30px;
 }
 
-.taskbar {
-    left: 0;
-    height: 50px;
-    background-color: blue;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: flex-start;
 
-}
-
-.windows {
-    background-color: green;
-    height: 100%;
-    width: 15%;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.windows img {
-    height: 100%;
-    background-color: green;
-    left: 0;
-
-}
 
 .howToPlay {
     display: none;
