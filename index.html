@@ -16,17 +16,25 @@
 
 
 <body>
+
+    <audio id="sound" src="./assets/music.mp3" loop preload="none" ></audio>
+
     <div class="programs">
         <div class="icon">
             <img class="icon_hcmiu" src="/assets/logo-vector-IU-01.png" alt="">
         </div>
 
         <div class="program choose-flag">
-            <h3 class="btn-title">🚩Choose flag </h3>
+            <h3 class="btn-title">Choose flag 🚩
+                bomb 💣</h3>
         </div>
 
         <div class="program how-to-play">
             <h3 class="btn-title">❓How to play </h3>
+        </div>
+
+        <div class="program mute">
+            <h3 class="btn-title">Sound<span id="mute-icon">🔇</span> </h3>
         </div>
 
         <div class="program choose-flag">
@@ -37,7 +45,7 @@
         </div>
     </div>
 
-    <div class="board-container">
+    <!-- <div class="board-container">
         <div class="title">
             <img class="title-img" src="./assets/Minesweeper_1992.webp" alt="">
             <h1 class="title__title">MINESWEEPER</h1>
@@ -57,7 +65,7 @@
             <img class="undo-img" src="./assets/undo.png" alt="">
         </button>
         </div>
-    </div>
+    </div> -->
 
     <div class="overlay">
         <div class="choose">
@@ -88,6 +96,8 @@
     </div>
 
     <script>
+        
+
         var closeX = document.querySelector(".close-btn")
         var closeX2 = document.querySelector(".close-btn2")
 

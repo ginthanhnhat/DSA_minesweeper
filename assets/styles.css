@@ -133,7 +133,6 @@ h3 {
     background-color: transparent;
     width: 60px;
     height: 60px;
-
     animation: floating 1s ease-in-out infinite alternate;
 }
 
@@ -290,7 +289,8 @@ h3 {
 }
 
 div.program.choose-flag,
-div.program.how-to-play {
+div.program.how-to-play,
+div.program.mute {
     background-color: rgb(239, 236, 231);
     box-shadow: inset;
     width: 190px;
@@ -314,7 +314,8 @@ div.program.how-to-play {
 }
 
 div.program.choose-flag:hover,
-div.program.how-to-play:hover {
+div.program.how-to-play:hover,
+div.program.mute:hover {
     background-color: rgb(37, 37, 37);
     cursor: pointer;
 }
@@ -377,4 +378,7 @@ div.program.how-to-play:hover {
         justify-content: space-around;
         width: 400px;
     }
+    .board-container {
+        margin-left: 0px;
+        margin-right: 0px;}
 }

@@ -13,10 +13,39 @@ var gameState = [];
 var gameStateIndex = -1;
 var bomb = "💣";
 var flag = "🚩";
+var isMute = false;
 
 window.onload = function () {
   startGame();
+  console.log(isMute);
 };
+
+function playBackgroundmusic(){
+  var backgroundMusic = document.getElementById("sound");
+  if(isMute == false){
+  backgroundMusic.volume = 0.2;
+  backgroundMusic.play();
+  }
+  
+}
+
+function muteSound() {
+  var backgroundMusic = document.getElementById("sound");
+  var muteIcon = document.getElementById("mute-icon");
+
+  if (isMute) {
+    backgroundMusic.volume = 0.2;
+    isMute = false;
+    muteIcon.innerText ="🔊"
+  } else {
+    backgroundMusic.volume = 0;
+    isMute = true;
+    muteIcon.innerText ="🔇"
+  }
+
+  console.log(isMute);
+}
+  
 function startGame() {
     document.getElementById("bomb1").addEventListener("click", setBomb1);
     document.getElementById("bomb2").addEventListener("click", setBomb2);
@@ -27,6 +56,7 @@ function startGame() {
     document.getElementById("mines-count").innerText = minesCount;
     document.getElementById("flag-button").innerText = flag;
     document.getElementById("flag-button").addEventListener("click", setFlag);
+    document.querySelector(".program.mute").addEventListener("click", muteSound);
     document.getElementById("undo").addEventListener("click", undo);
     setMines();   
 
@@ -78,6 +108,7 @@ function clickTile() {
     alert("GAME OVER");
     gameOver = true;
     revealMines();
+    stopBackgroundmusic()
     saveState();
 
     return;
@@ -86,6 +117,7 @@ function clickTile() {
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
     checkMine(r, c);
+    playBackgroundmusic()
     saveState();
   }
 }
@@ -99,6 +131,7 @@ function revealMines() {
       }
     }
   }
+  stopBackgroundmusic();
 }
 
 function checkTile(r, c) {
