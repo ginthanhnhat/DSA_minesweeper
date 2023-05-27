@@ -16,6 +16,7 @@ var flag = "🚩";
 
 window.onload = function () {
   startGame();
+  
 };
 function startGame() {
     document.getElementById("bomb1").addEventListener("click", setBomb1);

@@ -377,4 +377,7 @@ div.program.how-to-play:hover {
         justify-content: space-around;
         width: 400px;
     }
+    .board-container {
+        margin-left: 0px;
+        margin-right: 0px;}
 }
