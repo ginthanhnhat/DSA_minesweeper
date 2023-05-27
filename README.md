@@ -1,8 +1,10 @@
+  
+![1-removebg-preview (2)](https://github.com/tainguynnn/DSA_minesweeper/assets/91893958/ca045912-6376-483e-be66-07cb4feaa602)
+
 # DSA_Minesweeper
 Algorithms & Data Structures
 Dr. Tran Thanh Tung
 Sem 2 (2022-2023)
-
 A brief description of your project.
 
 ## Table of Contents
@@ -46,12 +48,19 @@ The reason why we choose this topic because it is the challenging game, require 
 Let others know how they can contribute to your project. Include guidelines for reporting issues or submitting pull requests.
 ## GAME 🎮
 ### Requirement for software
-Language: html, css, js
-Platform: visual studio code
-### How to play 
+ #### 🧰 Languages and Tools:
+ <p align="center">
+ <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML" height="40" style="vertical-align:top; margin:4px">
+ <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript" height="40" style="vertical-align:top; margin:4px">
+ <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="Css" height="40" style="vertical-align:top; margin:4px">
+ <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="VS Code" height="40" style="vertical-align:top; margin:4px">
+ </p>
 
-
-
+### How to play
+Cick on a tile to play, If you click a tile with a mine, you lose
+In this game, there is only 10 mines. Your goal is to click all the tile without the mines inside\
+Mark the tile that you think there posibibly be a bomb to avoid accidentally click with the flag 🚩using right click
+Click the smiley face to restart the game or the ⏪ to undo
 ### Game logic 
  
 ### Features
@@ -74,9 +83,11 @@ Platform: visual studio code
 - Save game
 - Ranking
  #### Challenging
- 
-## Installation
-
+## What we have learned :pencil: 
+Soft skills: works in github, google docs, canva,...
+Main skills: debugs and team work
+Knowledge: html, css, javascript
+### Installation
 1. Download and unzip the file
 2. Click on index.html to play
 
