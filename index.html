@@ -17,7 +17,7 @@
 
 <body>
 
-    <audio id="sound" src="./assets/music.mp3" loop></audio>
+    <audio id="sound" src="./assets/music.mp3" loop preload="none" ></audio>
 
     <div class="programs">
         <div class="icon">
@@ -91,9 +91,7 @@
     </div>
 
     <script>
-        let backgroundMusic = document.getElementById("sound");
-      backgroundMusic.volume = 0.3;
-      backgroundMusic.play();
+        
 
         var closeX = document.querySelector(".close-btn")
         var closeX2 = document.querySelector(".close-btn2")

@@ -18,6 +18,18 @@ window.onload = function () {
   startGame();
   
 };
+
+function playBackgroundmusic(){
+        
+  var backgroundMusic = document.getElementById("sound");
+  backgroundMusic.volume = 0.2;
+  backgroundMusic.play();
+
+}
+
+function muteSound(){
+  backgroundMusic.pause();
+}
 function startGame() {
     document.getElementById("bomb1").addEventListener("click", setBomb1);
     document.getElementById("bomb2").addEventListener("click", setBomb2);
@@ -79,6 +91,7 @@ function clickTile() {
     alert("GAME OVER");
     gameOver = true;
     revealMines();
+    stopBackgroundmusic()
     saveState();
 
     return;
@@ -87,6 +100,7 @@ function clickTile() {
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
     checkMine(r, c);
+    playBackgroundmusic()
     saveState();
   }
 }
@@ -100,6 +114,7 @@ function revealMines() {
       }
     }
   }
+  stopBackgroundmusic();
 }
 
 function checkTile(r, c) {
