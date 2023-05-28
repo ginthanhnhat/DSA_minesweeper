@@ -10,10 +10,11 @@ A brief description of your project.
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Group members](#members)
 - [Contributing](#contributing)
-- [Features](#features)
+- [Game](#game)
+- [Discoveries](#discoveries)
 - [Installation](#installation)
+- [PowerPoint](#powerpoint)
 - [References](#references)
 
 
@@ -46,7 +47,7 @@ The reason why we choose this topic because it is the challenging game, require 
 
 
 Let others know how they can contribute to your project. Include guidelines for reporting issues or submitting pull requests.
-## GAME 🎮
+## GAME 
 ### Requirement for software
  #### 🧰 Languages and Tools:
  <p align="center">
@@ -65,33 +66,33 @@ Click the smiley face to restart the game or the ⏪ to undo
  
 ### Features
  #### Main features
-- Tile
+- Counting time
+- Tile board
 - Bomb
 - Flag
+- Reset
  #### Extra features
 - Choose flag
 - Choose bomb
-- Time counting
-- Count bomb
 - Undo
-- Replay
-- Background, effect  
+- Sound game
+- UI  
  #### Future features 
-- Redo
-- Include more game in one
-- More effect
-- Save game
-- Ranking
+- Database for user's score
+- Ranking for user
+- Different backgrounds and difficulties
  #### Challenging
-## What we have learned :pencil: 
+- Responsive
+## Discoveries
 Soft skills: works in github, google docs, canva,...
 Main skills: debugs and team work
-Knowledge: html, css, javascript
-### Installation
+Knowledge: Data Structure, UI design, new Coding language, draft a report, Github Usage, html, css, javascript
+## Installation
 1. Download and unzip the file
 2. Click on index.html to play
-
 or you can access to https://tainguynnn.github.io/DSA_minesweeper/ to play without downloading the file
+## PowerPoint
+![Capture](https://github.com/tainguynnn/DSA_minesweeper/assets/91893958/c133dd44-90b3-4259-ae96-68b3c022c95b)
 
 ## References
 
