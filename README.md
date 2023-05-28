@@ -42,7 +42,7 @@ The reason why we choose this topic because it is the challenging game, require 
 | 2     |                 js          |   Nguyễn Lê Thành Tài   |          25      |
 | 3     |                js       |  Nguyễn Huỳnh Anh Tú    |      25          |
 | 4     |                 html        |  Nguyễn Đăng Vũ Duy      |          25      |
-| 5     |                html                  |   Phạm Lê Huy    |          25      |
+| 5     |                html                  |   Trần Thanh Nhật    |          25      |
 
 
 Let others know how they can contribute to your project. Include guidelines for reporting issues or submitting pull requests.
