@@ -26,7 +26,18 @@ function playBackgroundmusic(){
   backgroundMusic.volume = 0.2;
   backgroundMusic.play();
   }
-  
+}
+function stopBackgroundmusic(){
+  var backgroundMusic = document.getElementById("sound");
+  backgroundMusic.pause();
+}
+
+function playClickSound(){
+  var clickSound = document.getElementById("click");
+  if(isMute == false){
+  clickSound.volume = 0.2;
+  clickSound.play();
+  }
 }
 
 function muteSound() {
@@ -43,7 +54,6 @@ function muteSound() {
     muteIcon.innerText ="🔇"
   }
 
-  console.log(isMute);
 }
   
 function startGame() {
@@ -108,6 +118,7 @@ function clickTile() {
     alert("GAME OVER");
     gameOver = true;
     revealMines();
+    playClickSound()
     stopBackgroundmusic()
     saveState();
 
@@ -117,6 +128,7 @@ function clickTile() {
     let r = parseInt(coords[0]);
     let c = parseInt(coords[1]);
     checkMine(r, c);
+    playClickSound()
     playBackgroundmusic()
     saveState();
   }
@@ -131,7 +143,6 @@ function revealMines() {
       }
     }
   }
-  stopBackgroundmusic();
 }
 
 function checkTile(r, c) {
@@ -188,9 +199,8 @@ function checkMine(r, c) {
 
   if (tilesClicked == rows * columns - minesCount) {
     document.getElementById("mines-count").innerText = "won";
-    alert("u win");
+    alert("you won - click on the smiley face to restart");
     gameOver = true;
-    location.reload();
   }
 }
 
