@@ -199,9 +199,8 @@ function checkMine(r, c) {
 
   if (tilesClicked == rows * columns - minesCount) {
     document.getElementById("mines-count").innerText = "won";
-    alert("u win");
+    alert("you won - click on the smiley face to restart");
     gameOver = true;
-    location.reload();
   }
 }
 

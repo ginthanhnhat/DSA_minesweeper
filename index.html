@@ -115,7 +115,7 @@
         document.querySelector("#timer").innerHTML = time
         setInterval(setTimer, 1000)
         function setTimer() {
-            if (mineCount != "won") {
+            if (gameOver != true) {
                 time++;
             }
             document.querySelector("#timer").innerHTML = time;
