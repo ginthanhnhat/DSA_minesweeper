@@ -81,7 +81,7 @@ h3 {
     flex-direction: row;
     align-items: center;
 
-    animation: blink 5s ease-in-out infinite alternate;
+    animation: blink 2s ease-in-out infinite alternate;
 
 }
 
