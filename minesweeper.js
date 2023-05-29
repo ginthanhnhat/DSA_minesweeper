@@ -63,7 +63,7 @@ function startGame() {
     document.getElementById("flag1").addEventListener("click", setflag1);
     document.getElementById("flag2").addEventListener("click", setflag2);
     document.getElementById("flag3").addEventListener("click", setflag3);
-    document.getElementById("mines-count").innerText = minesCount;
+    document.getElementById("mines-count").innerText = gameStateIndex+1;
     document.getElementById("flag-button").innerText = flag;
     document.getElementById("flag-button").addEventListener("click", setFlag);
     document.querySelector(".program.mute").addEventListener("click", muteSound);
@@ -83,6 +83,7 @@ function startGame() {
     board.push(row);
   }
   saveState();
+  console.log(gameStateIndex)
 }
 function setMines() {
   let minesLeft = minesCount;
@@ -110,9 +111,11 @@ function clickTile() {
     if (tile.innerText == "") {
       tile.innerText = flag;
       saveState();
+      document.getElementById("mines-count").innerText = gameStateIndex
     } else if (tile.innerText == flag) {
       tile.innerText = "";
       saveState();
+      document.getElementById("mines-count").innerText = gameStateIndex
     }
   } else if (minesLocation.includes(tile.id)) {
     alert("GAME OVER");
@@ -121,7 +124,7 @@ function clickTile() {
     playClickSound()
     stopBackgroundmusic()
     saveState();
-
+    document.getElementById("mines-count").innerText = gameStateIndex
     return;
   } else {
     let coords = tile.id.split("-");
@@ -131,6 +134,8 @@ function clickTile() {
     playClickSound()
     playBackgroundmusic()
     saveState();
+    document.getElementById("mines-count").innerText = gameStateIndex
+    console.log(gameStateIndex)
   }
 }
 
@@ -213,9 +218,11 @@ function putFlag(e) {
   if (tile.innerText == "") {
     tile.innerText = flag;
     saveState();
+    document.getElementById("mines-count").innerText = gameStateIndex
   } else if (tile.innerText == flag) {
     tile.innerText = "";
     saveState();
+    document.getElementById("mines-count").innerText = gameStateIndex
   }
 }
 
@@ -285,7 +292,9 @@ function undo() {
   if (gameStateIndex < 0) {
     return;
   }
+  gameStateIndex--;
   var state = gameState[gameStateIndex];
+
   board.forEach((row, rowIndex) => {
     row.forEach((tile, colIndex) => {
       var savedTile = state.board[rowIndex][colIndex];
@@ -293,8 +302,38 @@ function undo() {
       tile.className = savedTile.classes.join(" ");
     });
   });
+
   tilesClicked = state.tilesClicked;
   gameOver = state.gameOver;
   clearFutureStates();
-  gameStateIndex--;
+  document.getElementById("mines-count").innerText = gameStateIndex
 }
+
+// saveTile =  {
+//   id: tile.1-1,
+//   text: tile.innerText,
+//   classes: [...tile.classList],
+// }
+
+
+// state = {
+//   arrayOfTile:[
+//     {
+//       id: tile.id,
+//       text: tile.innerText,
+//       classes: [...tile.classList],
+//     }
+//     {
+//       id: tile.id,
+//       text: tile.innerText,
+//       classes: [...tile.classList],
+//     }
+//     {
+//       id: tile.id,
+//       text: tile.innerText,
+//       classes: [...tile.classList],
+//     }  
+//   ]
+//   tilesClicked:tilesClicked
+//   gameOver:gameOver
+// }
