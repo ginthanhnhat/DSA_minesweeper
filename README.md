@@ -93,8 +93,15 @@ Knowledge: Data Structure, UI design, new Coding language, draft a report, Githu
 or you can access to https://tainguynnn.github.io/DSA_minesweeper/ to play without downloading the file
 ## PowerPoint
 ![Capture](https://github.com/tainguynnn/DSA_minesweeper/assets/91893958/c133dd44-90b3-4259-ae96-68b3c022c95b)
+## Demo
+![ezgif com-video-to-gif (3)](https://github.com/tainguynnn/DSA_minesweeper/assets/91893958/f754c77e-48be-4b09-9379-d3034eb0fbed)
 
 ## References
+- Lecture, html, css, js knowledge
+- https://www.youtube.com/watch?v=1P6uLr1au0c
+- https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game/
+- https://www.youtube.com/watch?v=kBMnD_aElCQ
+- https://leetcode.com/problems/minesweeper/
 
 
 
