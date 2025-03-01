@@ -28,7 +28,7 @@ Group members:
 | 2     | Nguyễn Lê Thành Tài  | ITITIU20298 | ITITIU20298@student.hcmiu.edu.vn | tainguynnn                |
 | 3     | Nguyễn Huỳnh Anh Tú    | ITITIU20337 | ITITIU20337@student.hcmiu.edu.vn | ITITIU20337               |
 | 4     | Nguyễn Đăng Vũ Duy    | ITITWE19021 | ITITWE19021@student.hcmiu.edu.vn | DuyTek                    |   
-| 5     | Trần Thanh Nhật       | ITITIU20266 | ITITIU20266@student.hcmiu.edu.vn | Ginnit08                  | 
+| 5     | Trần Thanh Nhật       | ITITIU20266 | ITITIU20266@student.hcmiu.edu.vn | ginthanhnhat                  | 
 
 
 
